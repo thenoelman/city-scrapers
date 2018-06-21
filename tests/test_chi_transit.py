@@ -15,9 +15,9 @@ parsed_items = [item for item in spider.parse(test_response) if isinstance(item,
 freezer.stop()
 
 def test_name():
-    assert parsed_items[0]['name'] == 'ADA Advisory Committee Meeting'
-    assert parsed_items[1]['name'] == 'Employee Retirement Review Committee (Cancelled)'
-    assert parsed_items[2]['name'] == 'Regular Board Meeting of Chicago Transit Board'
+    assert parsed_items[0]['name'] == 'Employee Retirement Review Committee Meeting'
+    assert parsed_items[1]['name'] == 'Regular Board Meeting of Chicago Transit Board'
+    assert parsed_items[2]['name'] == 'Committee on Strategic Planning & Service Delivery'
 
 
 def test_description():
@@ -31,8 +31,8 @@ def test_start_time():
     
 def test_start():
     EXPECTED_START = {
-        'date': date(2018, 4, 9),
-        'time': time(13, 30),
+        'date': date(2018, 6, 15),
+        'time': time(14, 0),
         'note': ''
     }
     assert parsed_items[0]['start_time'] == EXPECTED_START    
